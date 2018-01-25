@@ -1,11 +1,14 @@
 # Latest stable NodeJS (LTS)
 FROM node:8.9.4
 
-WORKDIR /app
+# Docker optimization 
+# Read: http://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install
+RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 
-ADD . /app
-
-RUN cd /app && npm install
+WORKDIR /opt/app
+ADD . /opt/app
 
 EXPOSE 8080
 
