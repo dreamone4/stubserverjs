@@ -1,13 +1,11 @@
 # Docker & Node.JS
 
-## A simple stub server with Docker
-
 A simple stub server created using Restify.
 
 ### Create & run Docker image
 
-docker build -t stubserverjs .
-docker run -p 80:8080 stubserverjs
+- docker build -t stubserverjs .
+- docker run -p 80:8080 stubserverjs
 
 ### Test application
 
