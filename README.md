@@ -11,3 +11,8 @@ A simple stub server created using Restify.
 
 1. Open browser and go to [http://localhost:80/echo/yourname](http://localhost:80/echo/yourname)
 2. Change 'yourname' into something else and try again
+
+### References
+
+- [Develop with Docker](https://docs.docker.com/develop/)
+- [Restify](https://github.com/restify/node-restify)
